@@ -4,19 +4,19 @@
 ```shell
 docker create --net=host --env SYSLOG_PORT=1514 \
     --volume /mnt/logarch/data:/app_data \
-    --name logarch xdr/docker-syslog
+    --name logarch xdr/syslog
 ```
 
 When You create container with custom config:
 
 ```
 docker run --volume /mnt/logarch/conf:/mnt/tmp \
-    xcdr/docker-syslog cp /opt/etc/syslog-ng/syslog-ng.conf /mnt/tmp/
+    xcdr/syslog cp /opt/etc/syslog-ng/syslog-ng.conf /mnt/tmp/
 
 docker create --net=host --env SYSLOG_PORT=1514 \
     --volume /mnt/logarch/conf:/opt/etc/syslog-ng \
     --volume /mnt/logarch/data:/app_data \
-    --name logarch xcdr/docker-syslog
+    --name logarch xcdr/syslog
 ```
 
 ## Start container
