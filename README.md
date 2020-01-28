@@ -34,3 +34,6 @@ docker exec logarch /opt/bin/compress_logs.sh
 logger -n 127.0.0.1 -P 1514 --udp --rfc3164 "Test logarch"
 ```
 
+## License
+
+MIT
